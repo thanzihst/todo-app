@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/',views.SighUpView.as_view(),name="signup"),
     path('signin/',views.SignInView.as_view(),name="signin"),
-    path('signout/',views.SignOutView,name="signout"),
+    path('signout/',views.SignOutView.as_view(),name="signout"),
     path('index/',views.IndexView.as_view(),name="index"),
     path('todo/<int:pk>/delete/',views.TodoDeleteView.as_view(),name="todo-delete"),
     path('todo/<int:pk>/update/',views.TodoUpdateView.as_view(),name="todo-update"),

@@ -42,7 +42,7 @@ class SighUpView(View):
 
             print("created account")
 
-            return redirect("signup")
+            return redirect("signin")
         print("faild")
         return render(request,self.template_name,{"form":form_instance})
     
@@ -50,7 +50,7 @@ class SighUpView(View):
 
 class SignInView(View):
 
-    template_name="signin.html"
+    template_name="login.html"
 
     form_class=SignInForm
 
@@ -88,9 +88,9 @@ class SignInView(View):
             return render(request,self.template_name,{"form":form_instance})
         
 
-class SignOutView():
+class SignOutView(View):
 
-    def get(request,*args,**kwargs):
+    def get(self,request,*args,**kwargs):
 
         logout(request)
 

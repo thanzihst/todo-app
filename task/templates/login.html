@@ -61,8 +61,8 @@ body{
     bottom: -80px;
 }
 form{
-    height: 1000px;
-    width: 600px;
+    height: 520px;
+    width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -72,8 +72,7 @@ form{
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 180px 25px;
-    margin-top: 180px;
+    padding: 50px 35px;
 }
 form *{
     font-family: 'Poppins',sans-serif;
@@ -152,7 +151,7 @@ button{
     </div>
     <form method="post">
 
-        <h3>SignUP Here</h3>
+        <h3>Login Here</h3>
 
         {%csrf_token%}
 
@@ -162,7 +161,7 @@ button{
 
         <button type="submit">Log In</button>
 
-         <P>ALREDY USER? <a href="{%url 'signin'%}">LOG IN </a></P>
+         <P>NEW USER? <a href="{%url 'signup'%}">REGISTER</a></P>
         
     </form>
 </body>
